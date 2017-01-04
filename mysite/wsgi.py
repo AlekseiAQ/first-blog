@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application = get_wsgi_application()
+
+# from https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/heroku/
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
